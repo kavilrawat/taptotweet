@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Tap to Tweet",
+  "version": "3.2",
+  "description": "Quickly share highlighted text from any site to Twitter / X with a single click! Download Now! Refresh page after installing.",
+  "permissions": ["activeTab", "contextMenus"],
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
